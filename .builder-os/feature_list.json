@@ -1,0 +1,126 @@
+{
+  "project": "fcar-local",
+  "last_updated": "2026-10-23",
+  "rules": {
+    "single_active_feature": true,
+    "passing_requires_evidence": true,
+    "do_not_skip_verification": true
+  },
+  "status_legend": {
+    "not_started": "Work has not begun.",
+    "in_progress": "The feature is the current active task.",
+    "blocked": "Work cannot continue until a documented blocker is resolved.",
+    "passing": "Required verification has passed and evidence is recorded."
+  },
+  "features": [
+    {
+      "id": "fcar-001",
+      "priority": 1,
+      "area": "whitelist",
+      "title": "Canonical whitelist data file",
+      "user_visible_behavior": "whitelist.json carries verified skills, per-project stacks, known repo slugs and forbidden tokens, each traceable to PROJECT_LIST.md / AGENTS.md FCAR stacks / shipped repos; Flask marked verified-by-attestation + repos.",
+      "status": "passing",
+      "verification": [
+        "Data review: every whitelist skill maps to a named source project or attestation note.",
+        "Unit: loader validates schema and rejects a whitelist missing required keys."
+      ],
+      "evidence": [
+        "whitelist.json loads + validates: 66 verified skills, 18 project stacks, 31 known repos, 10 forbidden tokens; every entry source-traced after the FCAR round-1 prune (17 invented entries removed, JWT/Model serving/API+E2E testing re-attributed to their real projects)",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fcar-002",
+      "priority": 2,
+      "area": "check",
+      "title": "Forbidden-token scan",
+      "user_visible_behavior": "React/Golang/C++/C#/Power BI/PyTorch/TensorFlow/Hugging Face/Excel/Infyntrek/Jarvis tokens fail with line numbers; 'Go' fails as Golang anywhere or as a skills-section token, never as prose.",
+      "status": "passing",
+      "verification": [
+        "Unit: resume fixtures containing each forbidden token fail naming that token + line.",
+        "Unit: prose 'go-to-market' / 'go live' text passes."
+      ],
+      "evidence": [
+        "tests/test_forbidden_tokens.py + tests/test_fcar_round1_regressions.py: all 10 tokens fail with name+line; ReactJS/React.js/C++20/HuggingFace variants fail; Reactive/Preact and the lowercase verb 'excel' pass",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fcar-003",
+      "priority": 3,
+      "area": "check",
+      "title": "Skills-section verification",
+      "user_visible_behavior": "Skills blocks under common headings are tokenized; any token outside the verified whitelist fails by name; a missing skills section fails unless --allow-no-skills.",
+      "status": "passing",
+      "verification": [
+        "Unit: clean skills section passes.",
+        "Unit: section containing 'Kubernetes' fails naming it.",
+        "Unit: no-section resume fails; with the flag it passes with a warning."
+      ],
+      "evidence": [
+        "tests/test_skills_section.py: unknown token fails by name; Flask passes; skills-section 'Go' fails; headings incl. 'Skills & Tools:' and 'Technologies Used:' parse; multi-space separated skills pass; missing section fails, --allow-no-skills warns",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fcar-004",
+      "priority": 4,
+      "area": "check",
+      "title": "Repo-link + Jarvis rule",
+      "user_visible_behavior": "github.com/Shashank-VK/<slug> URLs must be in the known-repo set; Jarvis with a GitHub link fails, without one passes.",
+      "status": "passing",
+      "verification": [
+        "Unit: link to flask-ledger-api passes; link to an invented slug fails naming it.",
+        "Unit: Jarvis + link fails; Jarvis alone passes."
+      ],
+      "evidence": [
+        "tests/test_repo_links.py: unknown slug fails naming it; case-insensitive slug match passes; Jarvis+link fails (same line and bare-link next line); Jarvis without a link passes",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fcar-005",
+      "priority": 5,
+      "area": "check",
+      "title": "Test-count phrasing rule",
+      "user_visible_behavior": "'N/N passing' and 'N/N tests' claims fail; 'N tests in the suite' passes.",
+      "status": "passing",
+      "verification": [
+        "Unit: '23/23 passing' fails.",
+        "Unit: '23 tests in the suite' passes."
+      ],
+      "evidence": [
+        "tests/test_test_count_phrasing.py: 'N/N passing|tests|passed' fails with token+line; 'N tests in the suite' passes; bare ratios (24/7, 3/5 to 4/5, 28/28 verified), CGPA and dates pass",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fcar-006",
+      "priority": 6,
+      "area": "cli",
+      "title": "CLI contract",
+      "user_visible_behavior": "fcar_check.py <file|-> [--json] [--allow-no-skills] prints PASS/FAIL + findings; exit 0/1/2 for pass/fail/usage errors; runs in well under a second.",
+      "status": "passing",
+      "verification": [
+        "Unit/CLI: exit codes asserted for pass, fail and missing-file cases.",
+        "Timing: a resume-sized fixture checks in <1s."
+      ],
+      "evidence": [
+        "tests/test_cli.py: file and stdin input, exit 0/1/2, --json parses, clean fixture PASS in ~0.08-0.17s",
+        "Full suite: 75 passed (pytest via .builder-os/init.sh, exit 0)",
+        "FCAR round 1 FAIL (data inventions + matcher gaps) -> all findings fixed -> 17 regression tests pin them (round-2 re-review not run; fixes verified by the regression suite + probes, stated plainly in the report to main)"
+      ],
+      "notes": ""
+    }
+  ]
+}

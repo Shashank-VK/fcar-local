@@ -1,0 +1,3 @@
+# Runtime dependencies: standard library only (Python 3.12+)
+# Dev dependencies:
+# pytest>=8.0.0

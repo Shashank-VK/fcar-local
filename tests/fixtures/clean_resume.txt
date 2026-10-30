@@ -1,0 +1,24 @@
+SHASHANKAREDDY KARAMUDI
+Bengaluru, Karnataka | +91 9980955236 | shashankvkaramudi51@gmail.com
+github.com/Shashank-VK | linkedin.com/in/shashankareddy-karamudi
+
+TECHNICAL SKILLS
+Python, Flask, FastAPI, Docker, SQL, PostgreSQL, pytest, LangChain
+
+EXPERIENCE
+Development Intern | JB Arrow Star
+Engineered backend modules and integrated SCIM 2.0 and OAuth 2.0 REST APIs.
+
+SELECTED PROJECTS
+VoicePilot — Voice AI Agent — github.com/Shashank-VK/voicepilot
+43 tests in the suite. STT to LLM to TTS voice agent pipeline with FastAPI and Docker.
+
+Flask Ledger API — github.com/Shashank-VK/flask-ledger-api
+34 tests in the suite. Personal expense ledger REST API with Flask and SQLAlchemy.
+
+Green Grid AI — github.com/Shashank-VK/green-grid-ai
+EV infrastructure decision engine with 210K+ vehicle registrations across 17 zones.
+
+EDUCATION & CERTIFICATIONS
+B.Tech in Computer Science & Engineering | CMR University, Bengaluru — CGPA 8.9/10 | Expected 2027
+Certifications: Introduction to Machine Learning — NPTEL Swayam

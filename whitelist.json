@@ -1,0 +1,261 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "updated_at": "2026-10-23",
+    "sources": [
+      "~/AGENTS.md ('FCAR on resumes' canonical project stacks)",
+      "~/workspace/goals/land-a-ds-ml-internship-or-job/PROJECT_LIST.md (projects and repo slugs)",
+      "~/workspace/goals/land-a-ds-ml-internship-or-job/hidden_files/project-builder-inventory.md",
+      "Shipped repos: builds/flask-ledger-api, builds/flask-async-jobs, builds/flask-ml-serving"
+    ],
+    "flask_attestation_rule": "Flask is verified per Shashank's direct attestation on 2026-10-22 and substantiated by three shipped repositories (flask-ledger-api, flask-async-jobs, flask-ml-serving).",
+    "jarvis_rule": "Jarvis is a local-only project per PROJECT_LIST.md (voice assistant, not on GitHub). Mentions of Jarvis without a GitHub link pass; any mention carrying a GitHub link fails as an unverified repository link.",
+    "test_count_rule": "Test count phrasing must be 'N tests in the suite' (or 'N tests'). Ratios or fractions like 'N/N passing' or 'N/N tests' fail mechanical honesty review.",
+    "go_rule": "Plain prose uses of 'go' (e.g. 'go live', 'go-to-market') pass. 'Golang' anywhere or 'Go' claimed as a skill in the skills section fails.",
+    "fcar_prune_2026_10_23": "FCAR round 1 pruned entries tracing to none of the declared sources (Java, Prisma, Big Data pre-review; NumPy, Linux, OOP/SOLID set, Dashboards, Data quality/validation, Containerized deployment, AI coding agents, CD, Git, Express; ProjectFlow->JWT, wildlife->Pandas/Streamlit, aiprise->Pydantic misattributions; ts-express-api + stripe-webhook-idempotency stack entries dropped as unsourced). Rule: an entry exists only if a declared source states it."
+  },
+  "project_stacks": {
+    "VoicePilot": [
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "FastAPI",
+      "Docker",
+      "Docker Compose",
+      "Gradio",
+      "groq",
+      "openai",
+      "LLM APIs",
+      "speech-to-text",
+      "text-to-speech",
+      "STT",
+      "TTS"
+    ],
+    "GroundedQA": [
+      "Python",
+      "FastAPI",
+      "pgvector",
+      "LangChain",
+      "RAG"
+    ],
+    "EvalForge": [
+      "Python",
+      "CLI",
+      "HTML reports",
+      "pytest",
+      "prompt engineering"
+    ],
+    "Green Grid AI": [
+      "Python",
+      "Pandas",
+      "Streamlit",
+      "SQL",
+      "Google Maps API"
+    ],
+    "SQL Analytics Lab": [
+      "SQL",
+      "DuckDB",
+      "pytest"
+    ],
+    "ProjectFlow": [
+      "Django REST Framework",
+      "DRF",
+      "PostgreSQL",
+      "Docker",
+      "REST APIs"
+    ],
+    "mcp-agent-demo": [
+      "Python",
+      "LangGraph",
+      "MCP",
+      "tool-use",
+      "tool calling"
+    ],
+    "qa-e2e-lab": [
+      "Playwright",
+      "Postman",
+      "Newman",
+      "TypeScript",
+      "JavaScript",
+      "CI/CD",
+      "testing",
+      "API testing",
+      "E2E testing"
+    ],
+    "wildlife-detection": [
+      "Python",
+      "YOLOv8",
+      "ByteTrack"
+    ],
+    "apertureID": [
+      "Node.js",
+      "JavaScript",
+      "BullMQ",
+      "Docker",
+      "SCIM 2.0",
+      "OAuth 2.0",
+      "AES-256-GCM",
+      "REST APIs"
+    ],
+    "flask-ledger-api": [
+      "Flask",
+      "SQLAlchemy",
+      "PyJWT",
+      "SQLite",
+      "pytest",
+      "REST APIs",
+      "JWT"
+    ],
+    "flask-async-jobs": [
+      "Flask",
+      "Celery",
+      "Redis",
+      "Docker",
+      "SQLite",
+      "pytest"
+    ],
+    "flask-ml-serving": [
+      "Flask",
+      "scikit-learn",
+      "pydantic",
+      "Flask-Limiter",
+      "pytest",
+      "Model serving"
+    ],
+    "aiprise-vendor-normalizer": [
+      "FastAPI",
+      "Python"
+    ],
+    "agent-harness-eval": [
+      "Python",
+      "LLM APIs",
+      "CLI"
+    ],
+    "plantdoc-grounded-qa": [
+      "Python",
+      "BM25",
+      "RAG"
+    ],
+    "indic-voice-agent-eval": [
+      "Python",
+      "faster-whisper",
+      "gTTS"
+    ],
+    "truestate": [
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  "verified_skills": [
+    "AES-256-GCM",
+    "Analytics",
+    "API testing",
+    "BM25",
+    "BullMQ",
+    "ByteTrack",
+    "Celery",
+    "CI",
+    "CI/CD",
+    "CLI",
+    "Django REST Framework",
+    "Docker",
+    "Docker Compose",
+    "DRF",
+    "DSA",
+    "DuckDB",
+    "E2E testing",
+    "FastAPI",
+    "faster-whisper",
+    "Flask",
+    "Flask-Limiter",
+    "Google Maps API",
+    "Gradio",
+    "gTTS",
+    "HTML reports",
+    "JavaScript",
+    "JWT",
+    "LangChain",
+    "LangGraph",
+    "LLM APIs",
+    "Machine Learning",
+    "MCP",
+    "Model serving",
+    "Newman",
+    "Node.js",
+    "OAuth 2.0",
+    "Pandas",
+    "pgvector",
+    "Playwright",
+    "PostgreSQL",
+    "Postman",
+    "Prompt engineering",
+    "Pydantic",
+    "PyJWT",
+    "pytest",
+    "Python",
+    "RAG",
+    "Redis",
+    "REST",
+    "REST APIs",
+    "scikit-learn",
+    "SCIM 2.0",
+    "Speech-to-text",
+    "SQL",
+    "SQLAlchemy",
+    "SQLite",
+    "Streamlit",
+    "Testing",
+    "Text-to-speech",
+    "Tool calling",
+    "Tool-use",
+    "TypeScript",
+    "Voice AI",
+    "YOLOv8"
+  ],
+  "known_repos": [
+    "3d_commercial_ad",
+    "agent-harness-eval",
+    "Ai-solar-panel",
+    "aiprise-vendor-normalizer",
+    "annapurneshwari-clinic",
+    "apertureID",
+    "brute-force",
+    "churn-ml-lab",
+    "evalforge",
+    "flask-async-jobs",
+    "flask-ledger-api",
+    "flask-ml-serving",
+    "god_repo",
+    "green-grid-ai",
+    "groundedqa",
+    "indic-voice-agent-eval",
+    "mcp-agent-demo",
+    "muse-setup-guide",
+    "naviqon-landing",
+    "plantdoc-grounded-qa",
+    "projectflow",
+    "qa-e2e-lab",
+    "seo-inspector-saas",
+    "Shashank-VK.github.io",
+    "sql-analytics-lab",
+    "stripe-webhook-idempotency",
+    "supplement-yield-analyst",
+    "truestate",
+    "ts-express-api",
+    "voicepilot",
+    "wildlife-detection"
+  ],
+  "forbidden_tokens": [
+    "React",
+    "Golang",
+    "C++",
+    "C#",
+    "Power BI",
+    "PyTorch",
+    "TensorFlow",
+    "Hugging Face",
+    "Excel",
+    "Infyntrek"
+  ]
+}
